@@ -1,3 +1,38 @@
 // Place all the styles related to the flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar {
+  display: flex;
+  background-color: rgb(245, 245, 245);
+  margin-bottom: 40px
+}
+
+.nav-home-link {
+  text-decoration: none;
+  color: rgb(50,50,50)
+}
+
+.cards {
+  display: flex
+}
+
+.card {
+  width: 150px
+}
+
+.card-infos {
+  height: 150px
+}
+
+.booking-infos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.booking-text {
+  width: 500px;
+}
+
+.booking-form {
+  width: 200px;
+}

@@ -1,3 +1,8 @@
+<div class="navbar">
+    <div class="nav-home-link"> <%= link_to "Simple Airbnb", flats_path, class: "navbar-brand" %></div>
+    <div> <%= link_to "Add a flat", new_flat_path, class: "btn btn-outline-success" %></div>
+</div>
+
 <%= simple_form_for @flat do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>

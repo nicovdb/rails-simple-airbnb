@@ -1,19 +1,22 @@
-<div>
-  <%= link_to "Simple Airbnb", flats_path %>
-  <%= link_to "Add a flat", new_flat_path, class: "btn btn-primary" %>
+<div class="navbar">
+    <div class="nav-home-link"> <%= link_to "Simple Airbnb", flats_path, class: "navbar-brand" %></div>
+    <div> <%= link_to "Add a flat", new_flat_path, class: "btn btn-outline-success" %></div>
 </div>
 
 <h1>All our flats (<%= @flats.count %>)</h1>
-<% @flats.each do |flat| %>
-  <div>
-    <h3><%= flat.name %></h3>
-    <p><%= flat.address %></p>
-    <p><i class="fas fa-users"></i> <%= flat.number_of_guests%> <i class="fas fa-euro-sign"></i> <%= flat.price_per_night %></p>
-    <%= link_to "More infos", flat_path(flat) %>
-    <%= link_to "Edit", edit_flat_path(flat) %>
-    <%= link_to "Delete", flat_path(flat),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-    <hr>
-  </div>
-<% end %>
+<div class="cards">
+  <% @flats.each do |flat| %>
+    <div class="card card-body">
+      <div class="card-infos">
+        <h3><%= flat.name %></h3>
+        <p><%= flat.address %></p>
+        <p><i class="fas fa-users"></i> <%= flat.number_of_guests%> <i class="fas fa-euro-sign"></i> <%= flat.price_per_night %></p>
+      </div>
+      <p><%= link_to "More infos", flat_path(flat) %>
+      <%= link_to "Edit", edit_flat_path(flat) %>
+      <%= link_to "Delete", flat_path(flat),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %></p>
+    </div>
+  <% end %>
+</div>
